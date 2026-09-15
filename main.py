@@ -7,6 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
 
+from database import engine, Base
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Sistema de Pedidos - API")
 
