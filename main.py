@@ -56,14 +56,19 @@ manager = ConnectionManager()
 async def health_check():
     return {"status": "ok", "message": "API do Bar rodando com sucesso!"}
 
+@app.get("/pedidos")
+def listar_pedidos(db: Session = Depends(get_db)):
+    # Busca todos os pedidos do Neon ordenados pelos mais recentes
+    pedidos = db.query(models.Pedido).order_by(models.Pedido.id.desc()).all()
+    return pedidos
+
 # --- ROTA POST PERMUTADA PARA O NEON ---
 @app.post("/pedidos")
 async def criar_pedido(pedido: PedidoCreate, db: Session = Depends(get_db)):
     # 1. Instancia o objeto para a tabela
     novo_pedido = models.Pedido(
         drink=pedido.drink,
-        cliente_nome=pedido.cliente_nome,
-        status="ABERTO"
+        cliente_nome=pedido.cliente_nome
     )
 
     # 2. Persiste no banco de dados
@@ -74,9 +79,9 @@ async def criar_pedido(pedido: PedidoCreate, db: Session = Depends(get_db)):
     # 3. Prepara o dicionário para a transmissão WebSocket
     pedido_dict = {
         "id": novo_pedido.id,
-        "drink": novo_pedido.drink,
         "cliente_nome": novo_pedido.cliente_nome,
-        "status": novo_pedido.status
+        "drink": novo_pedido.drink,
+        "criado_em": novo_pedido.criado_em.isoformat() if novo_pedido.criado_em else None
     }
 
     await manager.broadcast({
