@@ -68,7 +68,8 @@ async def criar_pedido(pedido: PedidoCreate, db: Session = Depends(get_db)):
     # 1. Instancia o objeto para a tabela
     novo_pedido = models.Pedido(
         drink=pedido.drink,
-        cliente_nome=pedido.cliente_nome
+        cliente_nome=pedido.cliente_nome,
+        status="ABERTO"
     )
 
     # 2. Persiste no banco de dados
