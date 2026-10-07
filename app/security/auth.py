@@ -1,0 +1,59 @@
+import datetime
+
+import jwt
+from fastapi import WebSocket, HTTPException, Depends,  WebSocketException
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+
+from app.schemas.schemas import TokenPayload
+
+from app.exceptions.exceptions import ErroOperacional
+
+oauth_scheme = HTTPBearer()
+
+from app.core.config import SECRET_KEY, ALGORITHM
+
+def requer_roles(*permitidas):
+    def verificar(usuario: TokenPayload = Depends(autenticar_usuario)):
+        if usuario.role not in permitidas:
+            raise HTTPException(status_code=403, detail="Acesso negado")
+        return usuario
+    return verificar
+
+def create_token(payload: dict) -> str:
+    return jwt.encode(
+        payload,
+        SECRET_KEY,
+        algorithm=ALGORITHM
+    )
+
+def validate_token(token: str) -> dict:
+    try:
+        return jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(status_code=401, detail="Token expirado") from None
+    
+    except jwt.InvalidTokenError as e:
+        raise HTTPException(status_code=401, detail="Token inválido") from None
+
+async def autenticar_ws(websocket: WebSocket) -> TokenPayload:
+    token = websocket.query_params.get("token")
+
+    if not token:
+        raise WebSocketException(code=1008, reason="Token não informado")
+
+    payload = validate_token(token)
+
+    return TokenPayload.model_validate(payload)
+
+def autenticar_usuario(
+    credenciais: HTTPAuthorizationCredentials = Depends(oauth_scheme)
+) -> TokenPayload:
+    token = credenciais.credentials
+
+    if not token:
+        raise ErroOperacional("Token não informado")
+
+    payload = validate_token(token)
+
+    return TokenPayload.model_validate(payload)
