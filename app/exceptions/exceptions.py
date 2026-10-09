@@ -41,8 +41,12 @@ class CancelamentoInvalido(ErroDeNegocio):
 
 
 class PedidoNaoPodeSerFinalizado(ErroDeNegocio):
-    status_code = 400
+    status_code = 499
     message = "Pedido não pode ser finalizado"
+
+class PedidoNaoPodeSerEntregue(ErroDeNegocio):
+    status_code = 400
+    message = "Pedido não pode ser entregue"
 
 
 class PedidoNaoEncontrado(ErroDeNegocio):
@@ -56,8 +60,8 @@ class SemPermissao(ErroDeNegocio):
 
 
 class LoginInvalido(ErroDeNegocio):
-    status_code = 400
-    message = "Usuario ou senha invalidos"
+    status_code = 401
+    message = "Usuário ou senha inválidos"
 
 
 class RoleDesconhecida(ErroDeNegocio):

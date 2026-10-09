@@ -90,3 +90,19 @@ async def finalizar_pedido(
     await notificar_pv("pedido.updated", response_ws)
 
     return pedido
+
+@router.patch("/{pedido_id}/deliver", status_code=200, response_model=PedidoResponse)
+async def finalizar_pedido(
+    pedido_id: int,
+    _usuario: TokenPayload = Depends(requer_roles('cozinha')),
+    service: PedidosService = Depends(get_service),
+):
+    pedido = service.entregar_pedido(pedido_id)
+
+    response_ws = PedidoResponse.model_validate(pedido).model_dump(mode="json")
+
+    await notificar_pedido("pedido.updated", response_ws, pedido.vendedor_id)
+    await notificar_cozinha("pedido.updated", response_ws)
+    await notificar_pv("pedido.updated", response_ws)
+
+    return pedido

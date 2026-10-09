@@ -2436,3 +2436,441 @@ app.exceptions.operational.ErroOperacional: Token não informado
 26-10-04 18:24:11 - WARNING - Falha ao enviar para usuário 1 (bartender): conexão perdida
 26-10-04 18:24:11 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
 26-10-04 18:24:11 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-07 13:54:58 - INFO - Erro de negócio: 400 - Usuario ou senha invalidos
+26-10-07 13:55:09 - INFO - Erro de negócio: 400 - Usuario ou senha invalidos
+26-10-07 14:02:59 - INFO - Erro de negócio: 400 - Usuario ou senha invalidos
+26-10-07 14:06:07 - INFO - Erro de negócio: 400 - Usuario ou senha invalidos
+26-10-07 14:07:17 - INFO - Erro de negócio: 400 - Usuario ou senha invalidos
+26-10-07 14:12:35 - INFO - Erro de negócio: 401 - Usuário ou senha inválidos
+26-10-07 14:17:30 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-07 14:17:55 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 2
+26-10-07 14:18:05 - INFO - Conexão criada. Usuário: 8, Conexões ativas: 3
+26-10-07 14:19:02 - INFO - Conexão criada. Usuário: 5, Conexões ativas: 4
+26-10-07 15:21:10 - INFO - Conexão criada. Usuário: 5, Conexões ativas: 4
+26-10-07 15:21:10 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:30 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:30 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:35 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:35 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:40 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:40 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:45 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:45 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:50 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:50 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:24:55 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:24:55 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:00 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:00 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:05 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:05 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:10 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:10 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:15 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:15 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:20 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:20 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:25 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:25 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:30 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:30 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:35 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:35 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:40 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:40 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:45 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:45 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:50 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:50 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:25:55 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:25:55 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:00 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:00 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:05 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:05 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:10 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:10 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:15 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:15 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:20 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:20 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:25 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:25 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:30 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:30 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:26:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:26:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:16 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:16 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:21 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:21 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:26 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:26 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:31 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:31 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:27:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:27:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:16 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:16 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:21 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:21 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:26 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:26 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:31 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:31 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:28:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:28:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:16 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:16 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:21 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:21 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:26 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:26 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:31 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:31 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:29:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:29:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:17 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:17 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:22 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:22 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:27 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:27 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:32 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:32 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:37 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:37 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:42 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:42 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:47 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:47 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:52 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:52 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:30:57 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:30:57 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:02 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:02 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:07 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:07 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:12 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:12 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:17 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:17 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:22 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:22 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:27 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:27 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:32 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:32 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:37 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:37 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:42 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:42 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:47 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:47 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:52 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:52 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:31:57 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:31:57 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:02 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:02 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:07 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:07 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:12 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:12 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:17 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:17 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:22 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:22 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:27 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:27 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:32 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:32 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:37 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:37 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:42 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:42 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:47 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:47 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:52 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:52 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:32:57 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:32:57 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:02 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:02 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:07 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:07 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:12 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:12 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:17 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:17 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:22 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:22 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:27 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:27 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:32 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:32 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:37 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:37 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:42 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:42 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:47 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:47 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:52 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:52 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:33:58 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:33:58 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:03 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:03 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:08 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:08 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:13 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:13 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:18 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:18 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:23 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:23 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:28 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:28 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:33 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:34:33 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:34:37 - INFO - WebSocket desconectado: (1001, '')
+26-10-07 15:34:37 - INFO - Conexão finalizada. usuário: 4
+26-10-07 15:34:53 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:03 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:03 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:08 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:08 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:13 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:13 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:18 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:23 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:23 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:28 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:28 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:33 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:33 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:38 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:38 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:43 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:43 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:48 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:48 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:54 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:54 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:35:59 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:35:59 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:04 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:09 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:09 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:14 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:14 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:19 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:19 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:24 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:24 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:29 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:29 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:36:36 - INFO - WebSocket desconectado: (1001, '')
+26-10-07 15:36:36 - INFO - Conexão finalizada. usuário: 4
+26-10-07 15:36:48 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:57 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:36:57 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:02 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:02 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:07 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:07 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:12 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:12 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:18 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:18 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:23 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:23 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:28 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:28 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:33 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:33 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:38 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:38 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:43 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:43 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:48 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:48 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:53 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:53 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:37:58 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:37:58 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:03 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:38:03 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:08 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:38:08 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:13 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 4
+26-10-07 15:38:13 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:15 - INFO - WebSocket desconectado: (1012, None)
+26-10-07 15:38:15 - INFO - Conexão finalizada. usuário: 5
+26-10-07 15:38:15 - INFO - WebSocket desconectado: (1012, None)
+26-10-07 15:38:15 - INFO - Conexão finalizada. usuário: 4
+26-10-07 15:38:15 - INFO - WebSocket desconectado: (1012, None)
+26-10-07 15:38:15 - INFO - Conexão finalizada. usuário: 2
+26-10-07 15:38:15 - INFO - WebSocket desconectado: (1012, None)
+26-10-07 15:38:15 - INFO - Conexão finalizada. usuário: 8
+26-10-07 15:38:43 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:38:45 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:38:45 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:38:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:38:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:38:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:16 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:16 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:21 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:21 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:26 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:26 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:31 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:31 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:51 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:51 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:39:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:39:56 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:01 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:01 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:06 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:06 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:11 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:11 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:16 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:16 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:21 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:21 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:26 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:26 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:31 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:31 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:36 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:36 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:41 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:41 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:46 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:46 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:52 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:52 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:40:57 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:40:57 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:41:02 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:41:02 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:41:07 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-07 15:41:07 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-07 15:41:09 - INFO - WebSocket desconectado: (1012, None)
+26-10-07 15:41:09 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:26:51 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-09 16:27:38 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 2
+26-10-09 16:27:47 - INFO - Erro de negócio: 400 - Pedido não pode ser finalizado
+26-10-09 16:29:30 - INFO - Erro de negócio: 400 - Pedido não pode ser finalizado
+26-10-09 16:31:15 - INFO - Erro de negócio: 400 - Pedido não pode ser finalizado
+26-10-09 16:33:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:33:58 - INFO - Conexão finalizada. usuário: 2
+26-10-09 16:33:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:33:58 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:34:04 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-09 16:34:04 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-09 16:34:12 - INFO - Erro de negócio: 400 - Pedido não pode ser finalizado
+26-10-09 16:34:21 - INFO - Erro de negócio: 400 - Pedido não pode ser finalizado
+26-10-09 16:35:29 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:35:29 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:35:29 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:35:29 - INFO - Conexão finalizada. usuário: 2
+26-10-09 16:35:34 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-09 16:35:34 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 2
+26-10-09 16:35:39 - INFO - Erro de negócio: 499 - Pedido não pode ser finalizado
+26-10-09 16:35:48 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:35:48 - INFO - Conexão finalizada. usuário: 2
+26-10-09 16:35:48 - INFO - WebSocket desconectado: (1012, None)
+26-10-09 16:35:48 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:35:53 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 1
+26-10-09 16:35:53 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-09 16:36:13 - INFO - Erro de negócio: 499 - Pedido não pode ser finalizado
+26-10-09 16:36:44 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:36:44 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:36:56 - INFO - Conexão criada. Usuário: 4, Conexões ativas: 2
+26-10-09 16:37:06 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:37:06 - INFO - Conexão finalizada. usuário: 2
+26-10-09 16:37:20 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-09 16:38:56 - INFO - Conexão criada. Usuário: 8, Conexões ativas: 3
+26-10-09 16:39:16 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:39:16 - INFO - Conexão finalizada. usuário: 8
+26-10-09 16:39:25 - INFO - Conexão criada. Usuário: 8, Conexões ativas: 3
+26-10-09 16:53:16 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:53:16 - INFO - Conexão finalizada. usuário: 2
+26-10-09 16:53:16 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:53:16 - INFO - Conexão finalizada. usuário: 4
+26-10-09 16:53:16 - INFO - WebSocket desconectado: (1001, '')
+26-10-09 16:53:16 - INFO - Conexão finalizada. usuário: 8

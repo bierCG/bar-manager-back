@@ -66,3 +66,14 @@ class PedidosService():
             raise PedidoNaoPodeSerFinalizado
 
         return self.repo.update_status_pedido(pedido_id, "PRONTO")
+
+    def entregar_pedido(self, pedido_id: int):
+        pedido = self.repo.get_pedido(pedido_id)
+
+        if not pedido:
+            raise PedidoNaoEncontrado
+
+        if not pedido.status == "PRONTO":
+            raise PedidoNaoPodeSerFinalizado
+
+        return self.repo.update_status_pedido(pedido_id, "ENTREGUE")
