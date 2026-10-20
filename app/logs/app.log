@@ -2874,3 +2874,960 @@ app.exceptions.operational.ErroOperacional: Token não informado
 26-10-09 16:53:16 - INFO - Conexão finalizada. usuário: 4
 26-10-09 16:53:16 - INFO - WebSocket desconectado: (1001, '')
 26-10-09 16:53:16 - INFO - Conexão finalizada. usuário: 8
+26-10-19 21:06:15 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\login.py", line 24, in login
+    return service.logar(login)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\login.py", line 19, in logar
+    if not usuario or not validar_senha(login.senha, usuario.senha):
+                                                     ^^^^^^^^^^^^^
+AttributeError: 'Query' object has no attribute 'senha'
+26-10-19 21:07:56 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: ERRO:  coluna usuarios.usuario não existe
+LINE 1: ...d AS usuarios_id, usuarios.nome AS usuarios_nome, usuarios.u...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\login.py", line 24, in login
+    return service.logar(login)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\login.py", line 17, in logar
+    usuario = self.repo.get_by_username(login.usuario)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\repositories\usuarios.py", line 10, in get_by_username
+    return self.session.query(Usuario).where(Usuario.usuario == username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+           ^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) ERRO:  coluna usuarios.usuario não existe
+LINE 1: ...d AS usuarios_id, usuarios.nome AS usuarios_nome, usuarios.u...
+                                                             ^
+
+[SQL: SELECT usuarios.id AS usuarios_id, usuarios.nome AS usuarios_nome, usuarios.usuario AS usuarios_usuario, usuarios.senha AS usuarios_senha, usuarios.role AS usuarios_role 
+FROM usuarios 
+WHERE usuarios.usuario = %(usuario_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'usuario_1': 'gabriel@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+26-10-19 21:13:35 - INFO - Erro de negócio: 401 - Usuário ou senha inválidos
+26-10-19 21:19:00 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\usuarios.py", line 29, in cadastrar_usuario
+    return service.cadastrar_usuario(cadastro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\usuarios.py", line 18, in cadastrar_usuario
+    usuario = Usuario(
+              ^^^^^^^^
+TypeError: __init__() takes 1 positional argument but 2 were given
+26-10-19 21:20:45 - INFO - Erro de negócio: 401 - Usuário ou senha inválidos
+26-10-19 21:29:51 - INFO - Erro de negócio: 401 - Usuário ou senha inválidos
+26-10-19 21:29:55 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:31:00 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:31:00 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:31:36 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:33:10 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:33:19 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 53, in criar_pedido
+    pedido = service.criar_pedido(pedido, userAuth.sub, userAuth.empresa)
+                                                        ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\pydantic\main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Auth' object has no attribute 'empresa'
+26-10-19 21:33:27 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:33:27 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:33:27 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:33:39 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 53, in criar_pedido
+    pedido = service.criar_pedido(pedido, userAuth.sub, userAuth.empresa)
+                                                        ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\pydantic\main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Auth' object has no attribute 'empresa'
+26-10-19 21:34:08 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:34:08 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:34:08 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:34:08 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:34:13 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 21:34:13 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 21:34:30 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:34:30 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:34:30 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:34:34 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 53, in criar_pedido
+    pedido = service.criar_pedido(pedido, userAuth.sub)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\pedidos.py", line 26, in criar_pedido
+    pedido = Pedido(
+             ^^^^^^^
+TypeError: __init__() takes 1 positional argument but 2 were given
+26-10-19 21:35:14 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:35:14 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:35:14 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:35:14 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:35:18 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 21:35:20 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 21:35:21 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:35:21 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:35:21 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:35:26 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:35:26 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:35:26 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:37:30 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:37:30 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:37:30 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:37:38 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:37:38 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:37:38 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:37:41 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:37:41 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:37:41 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:37:51 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:37:51 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:37:51 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:37:58 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 21:37:58 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:37:58 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 21:37:58 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:43:23 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:43:46 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:44:32 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:44:32 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:44:32 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:45:04 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:45:04 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:45:04 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:45:08 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:45:08 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:45:08 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:45:18 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:45:18 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:45:18 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:45:23 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:45:23 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:45:23 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:46:17 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:46:17 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:46:17 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:46:24 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:46:24 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:46:24 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:46:52 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:46:52 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:46:52 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:46:56 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:46:56 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:46:56 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:47:00 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:47:00 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:47:01 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:47:04 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:47:04 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:47:04 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:47:17 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 21:47:17 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:47:17 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 21:47:17 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:48:57 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:49:05 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:49:07 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 78, in atualizar_status_pedido
+    pedido = service.atualiza_status_pedido(pedido_id, userAuth.sub, status)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\pedidos.py", line 34, in atualiza_status_pedido
+    pedido = self.repo.get_by_id(pedido_id, usuario_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\repositories\pedidos.py", line 14, in get_by_id
+    Pedido.Usuario_id == usuario_id
+    ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Pedido' has no attribute 'Usuario_id'
+26-10-19 21:49:28 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:49:28 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:49:28 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:49:28 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:49:31 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 21:49:33 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 21:49:35 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:49:35 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:49:35 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:49:35 - INFO - Erro de negócio: 400 - Pedido não encontrado
+26-10-19 21:56:35 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:56:35 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:56:35 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:56:35 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:56:41 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 21:56:41 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 21:57:48 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:57:48 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:57:48 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:57:48 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:57:53 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:57:54 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:57:55 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:57:55 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:57:55 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:57:59 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:57:59 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:57:59 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:58:03 - INFO - Erro de negócio: 404 - Pedido não encontrado
+26-10-19 21:58:03 - WARNING - Pedido não encontrado
+26-10-19 21:59:06 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:06 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:59:06 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:06 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:59:11 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 21:59:11 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 21:59:17 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:17 - INFO - Conexão finalizada. usuário: 1
+26-10-19 21:59:17 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:17 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:59:22 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 21:59:22 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:59:38 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:59:38 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:59:38 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:59:42 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 21:59:42 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:59:42 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 21:59:42 - WARNING - Erro de negócio: 404 - Pedido não encontrado
+26-10-19 21:59:55 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:55 - INFO - Conexão finalizada. usuário: 2
+26-10-19 21:59:55 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 21:59:55 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:00:00 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:00:00 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:00:02 - WARNING - Erro de negócio: 404 - Pedido não encontrado
+26-10-19 22:01:18 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:01:18 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:01:18 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:01:18 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:01:24 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 22:01:24 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:01:27 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:01:27 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:01:27 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:01:27 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:01:30 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:01:32 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:01:36 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:01:36 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:01:36 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:01:36 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 78, in atualizar_status_pedido
+    pedido = service.atualiza_status_pedido(pedido_id, status)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\services\pedidos.py", line 48, in atualiza_status_pedido
+    return self.repo.update(pedido_id, status)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PedidoRepository.update() takes 2 positional arguments but 3 were given
+26-10-19 22:02:01 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:02:01 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:02:01 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:02:01 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:02:04 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:02:06 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:02:10 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:02:10 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:02:10 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:02:10 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 82, in atualizar_status_pedido
+    await notificar_pedido("pedido.updated", response_ws, pedido.vendedor_id)
+                                                          ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Pedido' object has no attribute 'vendedor_id'
+26-10-19 22:02:17 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:02:17 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:02:17 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:02:27 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:02:27 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:02:27 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:02:27 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:02:31 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:02:33 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:02:48 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:02:48 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:02:48 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:04:28 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:04:28 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:04:28 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:04:45 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:04:45 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:04:45 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:04:54 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:04:54 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:04:54 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:13:43 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:13:43 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:13:43 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:14:44 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 22:19:35 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:19:35 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:19:35 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:19:35 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:19:35 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:19:35 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:19:40 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 22:19:40 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 22:19:40 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 22:20:00 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:20:00 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:20:00 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:20:00 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:20:00 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:20:00 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:20:05 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:20:05 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:20:05 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 22:22:40 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:22:40 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:22:40 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:22:40 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:22:40 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:22:40 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:22:45 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 1
+26-10-19 22:22:45 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:22:45 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 22:24:13 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 22:24:13 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:24:13 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 22:51:39 - INFO - WebSocket desconectado: (1005, None)
+26-10-19 22:51:40 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:51:41 - INFO - WebSocket desconectado: (1005, None)
+26-10-19 22:51:41 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:51:41 - INFO - WebSocket desconectado: (1005, None)
+26-10-19 22:51:41 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:52:04 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 1
+26-10-19 22:52:14 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:52:18 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 22:58:04 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:04 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:58:04 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:04 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:58:04 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:04 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:58:09 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 22:58:09 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 22:58:09 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 22:58:16 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:16 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:58:16 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:16 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:58:16 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:58:16 - INFO - Conexão finalizada. usuário: 1
+26-10-19 22:58:21 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 22:58:21 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 22:58:21 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 22:59:05 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:59:05 - INFO - Conexão finalizada. usuário: 2
+26-10-19 22:59:05 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:59:05 - INFO - Conexão finalizada. usuário: 3
+26-10-19 22:59:05 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 22:59:05 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:03:59 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 23:03:59 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 2
+26-10-19 23:03:59 - INFO - WebSocket desconectado: (1005, None)
+26-10-19 23:03:59 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:03:59 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 23:03:59 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:11:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:11:58 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:11:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:11:58 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:11:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:11:58 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:12:03 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 23:12:03 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 23:12:03 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:12:22 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:12:22 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:12:22 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:12:22 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:12:22 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:12:22 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:12:27 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 23:12:27 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:12:27 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 23:18:43 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 23:18:43 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:18:46 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:18:46 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:18:46 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:18:46 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:26:21 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 1
+26-10-19 23:27:16 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:27:36 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:28:47 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:28:47 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:28:48 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:28:48 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:28:48 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:28:54 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 3
+26-10-19 23:29:21 - ERROR - Erro interno não tratado
+Traceback (most recent call last):
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\app\routers\pedidos.py", line 86, in atualizar_status_pedido
+    response_ws = UpdateStatusResponse.model_validate(pedido).model_dump(mode="json")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projetos\develop\bar-manager-back\venv\Lib\site-packages\pydantic\main.py", line 732, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for UpdateStatusResponse
+  Input should be a valid dictionary or instance of UpdateStatusResponse [type=model_type, input_value=<app.core.database.models...t at 0x00000159F629B650>, input_type=Pedido]
+    For further information visit https://errors.pydantic.dev/2.13/v/model_type
+26-10-19 23:31:06 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:31:06 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:31:08 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:31:08 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:31:08 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:31:08 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:31:13 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 23:31:13 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 23:32:06 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:33:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:33:58 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:33:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:33:58 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:33:58 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:33:58 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:34:03 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 1
+26-10-19 23:34:03 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 23:34:03 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:37:08 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:37:08 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:37:08 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:38:06 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:38:06 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:38:09 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:38:09 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:38:09 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:39:06 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:40:06 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:40:06 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:41:06 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:42:04 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:42:04 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:42:09 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:43:49 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:43:49 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:43:49 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:43:49 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:43:49 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:43:49 - INFO - Conexão finalizada. usuário: 3
+26-10-19 23:43:54 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 1
+26-10-19 23:43:54 - INFO - Conexão criada. Usuário: 3, Conexões ativas: 2
+26-10-19 23:43:54 - INFO - Conexão criada. Usuário: 1, Conexões ativas: 3
+26-10-19 23:44:28 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:44:28 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:44:28 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:45:24 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:45:24 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:45:59 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:47:11 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:47:11 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:47:11 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:47:18 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:47:18 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:47:18 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:47:32 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 3
+26-10-19 23:47:32 - INFO - WebSocket desconectado: (4000, 'Nova conexão estabelecida')
+26-10-19 23:48:06 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:48:06 - INFO - Conexão finalizada. usuário: 1
+26-10-19 23:48:49 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:48:49 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:48:49 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:48:58 - INFO - WebSocket desconectado: (<CloseCode.NO_STATUS_RCVD: 1005>, '')
+26-10-19 23:48:58 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:48:58 - INFO - Conexão criada. Usuário: 2, Conexões ativas: 2
+26-10-19 23:48:59 - INFO - WebSocket desconectado: (1001, '')
+26-10-19 23:48:59 - INFO - Conexão finalizada. usuário: 2
+26-10-19 23:53:03 - INFO - WebSocket desconectado: (1012, None)
+26-10-19 23:53:03 - INFO - Conexão finalizada. usuário: 3

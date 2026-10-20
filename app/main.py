@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers import login, usuarios, pedidos, websocket
-from app.exceptions.exceptions import ErroDeNegocio, ErroOperacional
-from app.exceptions.handlers import (
+from app.core.exceptions.exceptions import ErroDeNegocio, ErroOperacional
+from app.core.exceptions.handlers import (
     erro_negocio_handler, erro_interno_handler, erro_operacional_handler
 )
 

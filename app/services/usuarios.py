@@ -1,26 +1,23 @@
 from sqlalchemy.orm import Session
 
-from app.schemas.schemas import UsuarioCreate
-from app.exceptions.exceptions import RoleDesconhecida
+from app.core.database.models import Usuario
+from app.schemas.usuarios import CreateRequest
+from app.core.exceptions.exceptions import RoleDesconhecida
 from app.repositories.usuarios import UsuarioRepository
 
-from app.security.password import hash_senha
+from app.core.security.password import hash_senha
 
 class UsuarioService():
     def __init__(self, session: Session):
-        self.session = session
         self.repo = UsuarioRepository(session)
 
-
-    def listar_usuarios(self):
-        return self.repo.get_all()
-
-
-    def criar_usuario(self, dados_usuario: UsuarioCreate):
-        if dados_usuario.role not in ["bartender", "cozinha", "pv"]:
+    def cadastrar_usuario(self, cadastro: CreateRequest) -> Usuario:
+        if cadastro.role not in ["bartender", "cozinha", "expositor"]:
             raise RoleDesconhecida
 
-        dados = dados_usuario.model_dump()
-        dados["senha"] = hash_senha(dados["senha"])
+        usuario = Usuario(
+            **cadastro.model_dump(exclude={"senha"}),
+            senha = hash_senha(cadastro.senha)
+        )
 
-        return self.repo.create(dados)
+        return self.repo.create(usuario)

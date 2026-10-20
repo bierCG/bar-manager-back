@@ -1,6 +1,6 @@
 import pytest
 
-from app.exceptions.exceptions import (
+from app.core.exceptions.exceptions import (
     PedidoNaoEncontrado,
     CancelamentoInvalido,
     PedidoNaoPodeSerFinalizado

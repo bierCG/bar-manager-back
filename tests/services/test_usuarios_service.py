@@ -3,11 +3,11 @@ import pytest
 from sqlalchemy.exc import IntegrityError
 
 from app.schemas.schemas import UsuarioCreate
-from app.exceptions.exceptions import RoleDesconhecida
+from app.core.exceptions.exceptions import RoleDesconhecida
 from app.services.usuarios import UsuarioService
 from tests.conftest import session
 
-from app.security.password import validar_senha
+from app.core.security.password import validar_senha
 
 
 # ------------------------------------------------------------------------------------------

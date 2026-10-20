@@ -1,17 +1,11 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.schemas.schemas import LoginCreate, LoginResponse
+from app.schemas.login import LoginRequest, LoginResponse
 from app.services.login import LoginService
-from app.database.connection import get_db
+from app.core.database.connection import get_db
 
 router = APIRouter(prefix="/login", tags=["Login"])
-
-# ------------------------------------------------------------------------------------------
-#
-# ### GET ###
-#
-# ------------------------------------------------------------------------------------------
 
 def get_service(session: Session = Depends(get_db)) -> LoginService:
     return LoginService(session)
@@ -24,7 +18,7 @@ def get_service(session: Session = Depends(get_db)) -> LoginService:
 
 @router.post("/", response_model=LoginResponse)
 def login(
-    login: LoginCreate,
+    login: LoginRequest,
     service: LoginService = Depends(get_service)
 ):
-    return service.logar(email=login.email, senha=login.senha)
+    return service.logar(login)

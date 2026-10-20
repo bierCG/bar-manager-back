@@ -1,8 +1,8 @@
 from sqlalchemy import select
 
-from app.database.connection import SessionLocal
-from app.database.models import Usuario
-from app.security.password import hash_senha
+from app.core.database.connection import SessionLocal
+from app.core.database.models import Usuario
+from app.core.security.password import hash_senha
 
 EMAIL = "admin@exemplo.com"
 SENHA = "admin123"

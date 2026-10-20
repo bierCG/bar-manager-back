@@ -3,8 +3,8 @@ from datetime import datetime, timedelta, timezone
 from fastapi.testclient import TestClient
 
 from app.main import app
-from app.database.connection import get_db
-from app.security.auth import create_token
+from app.core.database.connection import get_db
+from app.core.security.auth import create_token
 
 fake_payload = {
     "bartender": {

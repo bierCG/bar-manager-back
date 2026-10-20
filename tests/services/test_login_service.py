@@ -1,6 +1,6 @@
 import pytest
 
-from app.exceptions.exceptions import LoginInvalido
+from app.core.exceptions.exceptions import LoginInvalido
 from app.services.login import LoginService
 from tests.conftest import session
 

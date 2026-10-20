@@ -22,7 +22,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session                
 
 from app.main import app                           
-from app.database.connection import get_db         
+from app.core.database.connection import get_db         
 
 SEEDS_SQL = Path(__file__).parent / "seed.sql"     
 

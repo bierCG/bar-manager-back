@@ -1,4 +1,4 @@
-from app.security.password import hash_senha, validar_senha
+from app.core.security.password import hash_senha, validar_senha
 
 
 def test_hash_senha():

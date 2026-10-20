@@ -9,6 +9,6 @@ async def notificar_cozinha(evento: str, pedido):
     mensagem = {"event": evento, "payload": pedido}
     await manager.broadcast_role("cozinha", mensagem)
 
-async def notificar_pv(evento: str, pedido):
+async def notificar_expositor(evento: str, pedido):
     mensagem = {"event": evento, "payload": pedido}
-    await manager.broadcast_role("pv", mensagem)
+    await manager.broadcast_role("expositor", mensagem)

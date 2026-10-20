@@ -1,17 +1,17 @@
 from fastapi import WebSocket
 
-from app.schemas.schemas import TokenPayload
+from app.schemas.auth import Auth
 from app.core.logger import logger
 
 class ConnectionManager:
     def __init__(self):
         self.connections: dict[str, dict[int, WebSocket]] = {
-            "pv":{},
+            "expositor":{},
             "cozinha":{},
             "bartender":{}
         }
 
-    async def connect(self, websocket: WebSocket, usuario: TokenPayload):
+    async def connect(self, websocket: WebSocket, usuario: Auth):
         await websocket.accept()
         
         antiga = self.connections.get(usuario.role, {}).get(usuario.sub)

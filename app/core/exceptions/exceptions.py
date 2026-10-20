@@ -50,12 +50,12 @@ class PedidoNaoPodeSerEntregue(ErroDeNegocio):
 
 
 class PedidoNaoEncontrado(ErroDeNegocio):
-    status_code = 400
+    status_code = 404
     message = "Pedido não encontrado"
 
 
 class SemPermissao(ErroDeNegocio):
-    status_code = 400
+    status_code = 401
     message = "Você não tem permissão para esta ação"
 
 

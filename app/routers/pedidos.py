@@ -1,11 +1,18 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.security.auth import requer_roles
-from app.schemas.schemas import TokenPayload, PedidoCreate, PedidoResponse
+from app.core.security.auth import requer_roles
+from app.schemas.auth import Auth
+from app.schemas.pedidos import (
+    CreateRequest,
+    CreateResponse,
+    UpdateStatusRequest,
+    UpdateStatusResponse,
+    ReadResponse
+)
 from app.services.pedidos import PedidosService
-from app.database.connection import get_db
-from app.websocket.notify import notificar_cozinha, notificar_pedido, notificar_pv
+from app.core.database.connection import get_db
+from app.websocket.notify import notificar_cozinha, notificar_pedido, notificar_expositor
 
 router = APIRouter(prefix="/pedidos", tags=["Pedidos"])
 
@@ -18,19 +25,24 @@ def get_service(session: Session = Depends(get_db)) -> PedidosService:
 #
 # ------------------------------------------------------------------------------------------
 
-@router.get("/", response_model=list[PedidoResponse])
+@router.get(
+    "/",
+    dependencies=[Depends(requer_roles('cozinha', 'expositor'))],
+    response_model=list[ReadResponse])
 def listar_ultimos_pedidos(
-    _usuario: TokenPayload = Depends(requer_roles('cozinha', 'pv')),
     service: PedidosService = Depends(get_service)
 ):
     return service.listar_ultimos_pedidos()
 
-@router.get("/bartender", response_model=list[PedidoResponse])
+@router.get(
+    "/bartender",
+    response_model=list[ReadResponse]
+)
 def listar_pedidos_bartender(
-    usuario: TokenPayload = Depends(requer_roles('bartender')),
+    userAuth: Auth = Depends(requer_roles('bartender')),
     service: PedidosService = Depends(get_service),
 ):
-    return service.listar_pedidos_bartender(usuario.sub)
+    return service.listar_pedidos_bartender(userAuth.sub)
 
 # ------------------------------------------------------------------------------------------
 #
@@ -38,18 +50,18 @@ def listar_pedidos_bartender(
 #
 # ------------------------------------------------------------------------------------------
 
-@router.post("/", response_model=PedidoResponse)
+@router.post("/", response_model=CreateResponse)
 async def criar_pedido(
-    dados: PedidoCreate,
-    usuario: TokenPayload = Depends(requer_roles('bartender')),
+    dados_pedido: CreateRequest,
+    userAuth: Auth = Depends(requer_roles('bartender')),
     service: PedidosService = Depends(get_service),
 ):
-    pedido = service.criar_pedido(dados_pedido=dados, usuario_id=usuario.sub)
+    pedido = service.criar_pedido(dados_pedido, userAuth.sub)
 
-    response_ws = PedidoResponse.model_validate(pedido).model_dump(mode="json")
+    response_ws = CreateResponse.model_validate(pedido).model_dump(mode="json")
 
     await notificar_cozinha("pedido.created", response_ws)
-    await notificar_pv("pedido.created", response_ws)
+    await notificar_expositor("pedido.created", response_ws)
 
     return pedido
 
@@ -59,50 +71,22 @@ async def criar_pedido(
 #
 # ------------------------------------------------------------------------------------------
 
-@router.patch("/{pedido_id}/cancel", status_code=200, response_model=PedidoResponse)
-async def cancelar_pedido(
+@router.patch(
+    "/{pedido_id}/status",
+    dependencies=[Depends(requer_roles('cozinha'))],
+    response_model=UpdateStatusResponse
+)
+async def atualizar_status_pedido(
     pedido_id: int,
-    _usuario: TokenPayload = Depends(requer_roles('cozinha')),
-    service: PedidosService = Depends(get_service),
+    dados: UpdateStatusRequest,
+    service: PedidosService = Depends(get_service)
 ):
-    pedido = service.cancelar_pedido(pedido_id)
+    pedido = service.atualiza_status_pedido(pedido_id, dados.status)
+    
+    response_ws = UpdateStatusResponse.model_validate(pedido).model_dump(mode="json")
 
-    response_ws = PedidoResponse.model_validate(pedido).model_dump(mode="json")
-
-    await notificar_pedido("pedido.updated", response_ws, pedido.vendedor_id)
+    await notificar_pedido("pedido.updated", response_ws, pedido.usuario_id)
     await notificar_cozinha("pedido.updated", response_ws)
-    await notificar_pv("pedido.updated", response_ws)
-
-    return pedido
-
-@router.patch("/{pedido_id}/finish", status_code=200, response_model=PedidoResponse)
-async def finalizar_pedido(
-    pedido_id: int,
-    _usuario: TokenPayload = Depends(requer_roles('cozinha')),
-    service: PedidosService = Depends(get_service),
-):
-    pedido = service.finalizar_pedido(pedido_id)
-
-    response_ws = PedidoResponse.model_validate(pedido).model_dump(mode="json")
-
-    await notificar_pedido("pedido.updated", response_ws, pedido.vendedor_id)
-    await notificar_cozinha("pedido.updated", response_ws)
-    await notificar_pv("pedido.updated", response_ws)
-
-    return pedido
-
-@router.patch("/{pedido_id}/deliver", status_code=200, response_model=PedidoResponse)
-async def finalizar_pedido(
-    pedido_id: int,
-    _usuario: TokenPayload = Depends(requer_roles('cozinha')),
-    service: PedidosService = Depends(get_service),
-):
-    pedido = service.entregar_pedido(pedido_id)
-
-    response_ws = PedidoResponse.model_validate(pedido).model_dump(mode="json")
-
-    await notificar_pedido("pedido.updated", response_ws, pedido.vendedor_id)
-    await notificar_cozinha("pedido.updated", response_ws)
-    await notificar_pv("pedido.updated", response_ws)
+    await notificar_expositor("pedido.updated", response_ws)
 
     return pedido

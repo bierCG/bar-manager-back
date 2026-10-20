@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 from starlette.websockets import WebSocketDisconnect
 
 from app.main import app
-from app.security.auth import create_token
+from app.core.security.auth import create_token
 
 
 client = TestClient(app)

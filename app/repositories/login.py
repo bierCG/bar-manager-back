@@ -1,13 +1,13 @@
 from sqlalchemy.orm import Session
-from app.database.models import Usuario
+from app.core.database.models import Usuario
 
 class LoginRepository():
     def __init__(self, session: Session):
         self.session = session
 
-    def get_user(self, email: str):
+    def get_by_username(self, username: str) -> Usuario | None:
         return (
             self.session.query(Usuario)
-            .filter(Usuario.email == email)
+            .filter(Usuario.usuario == username)
             .first()
         )

@@ -1,7 +1,7 @@
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
-from app.exceptions.exceptions import (
+from app.core.exceptions.exceptions import (
     ErroDeNegocio,
     ErroOperacional,
     PedidoNaoEncontrado,
@@ -17,7 +17,7 @@ STATUS_POR_ERRO = {
 }
 
 async def erro_negocio_handler(request: Request, exc: ErroDeNegocio) -> JSONResponse:
-    logger.info("Erro de negócio: %s - %s", exc.status_code, exc.message)
+    logger.warning("Erro de negócio: %s - %s", exc.status_code, exc.message)
 
     return JSONResponse(
         status_code=exc.status_code,
@@ -25,7 +25,7 @@ async def erro_negocio_handler(request: Request, exc: ErroDeNegocio) -> JSONResp
     )
 
 async def erro_operacional_handler(request: Request, exc: ErroOperacional) -> JSONResponse:
-    logger.info("Erro de operação: %s - %s", exc.status_code, exc.message)
+    logger.warning("Erro de operação: %s - %s", exc.status_code, exc.message)
 
     return JSONResponse(
         status_code=500,
