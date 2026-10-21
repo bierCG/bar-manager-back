@@ -1,13 +1,21 @@
+from enum import Enum
 from pydantic import ConfigDict
+
 from app.schemas import Base
 
-class CreateRequest(Base):
+class UserRole(str, Enum):
+    COZINHA = "COZINHA"
+    EXPOSITOR = "EXPOSITOR"
+    BARTENDER = "BARTENDER"
+    ADMIN = "ADMIN"
+
+class CadastroUsuarioRequest(Base):
     nome: str
     usuario: str
     senha: str
-    role: str
+    role: UserRole
 
-class CreateResponse(Base):
+class CadastroUsuarioResponse(Base):
     id: int
     nome: str
     usuario: str

@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from .admin import setup_admin
+
 from app.routers import login, usuarios, pedidos, websocket
 from app.core.exceptions.exceptions import ErroDeNegocio, ErroOperacional
 from app.core.exceptions.handlers import (
@@ -25,6 +27,8 @@ app.include_router(websocket.router)
 app.add_exception_handler(ErroDeNegocio, erro_negocio_handler)
 app.add_exception_handler(ErroOperacional, erro_operacional_handler)
 app.add_exception_handler(Exception, erro_interno_handler)
+
+setup_admin(app)
 
 @app.get("/")
 async def health_check():

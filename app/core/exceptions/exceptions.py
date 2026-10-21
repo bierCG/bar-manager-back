@@ -65,5 +65,9 @@ class LoginInvalido(ErroDeNegocio):
 
 
 class RoleDesconhecida(ErroDeNegocio):
-    status_code = 400
+    status_code = 404
     message = "Role desconhecida"
+
+class UsuarioDuplicado(ErroDeNegocio):
+    status_code = 404
+    message = "Usuário já possui cadastro"

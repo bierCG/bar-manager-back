@@ -3831,3 +3831,4 @@ pydantic_core._pydantic_core.ValidationError: 1 validation error for UpdateStatu
 26-10-19 23:48:59 - INFO - Conexão finalizada. usuário: 2
 26-10-19 23:53:03 - INFO - WebSocket desconectado: (1012, None)
 26-10-19 23:53:03 - INFO - Conexão finalizada. usuário: 3
+26-10-20 14:35:27 - WARNING - Erro de negócio: 400 - Role desconhecida

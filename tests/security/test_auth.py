@@ -7,7 +7,7 @@ from starlette.websockets import WebSocketDisconnect
 
 from app.main import app
 from app.core.security.auth import create_token, validate_token
-from app.core.config import SECRET_KEY, ALGORITHM
+from app.core.config import JWT_SECRET_KEY, ALGORITHM
 
 # OAuthPasswordBearer is not tested here because it is part of FastAPI's security utilities and not custom logic.
 # OAithPasswordBearer is a dependency that FastAPI provides to handle OAuth2 password flow, and its functionality is assumed to be correct as it is part of the FastAPI framework.
@@ -58,7 +58,7 @@ def test_token_invalido():
 def test_token_expirado():
     payload = fake_payloads["expired"]
 
-    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    token = jwt.encode(payload, JWT_SECRET_KEY, algorithm=ALGORITHM)
 
     with pytest.raises(HTTPException) as exc:
         validate_token(token)

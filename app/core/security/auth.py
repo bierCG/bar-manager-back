@@ -10,7 +10,7 @@ from app.core.exceptions.exceptions import ErroOperacional
 
 oauth_scheme = HTTPBearer()
 
-from app.core.config import SECRET_KEY, ALGORITHM
+from app.core.config import JWT_SECRET_KEY, ALGORITHM
 
 def requer_roles(*permitidas):
     def verificar(usuario: Auth = Depends(autenticar_usuario)):
@@ -22,13 +22,13 @@ def requer_roles(*permitidas):
 def create_token(payload: dict) -> str:
     return jwt.encode(
         payload,
-        SECRET_KEY,
+        JWT_SECRET_KEY,
         algorithm=ALGORITHM
     )
 
 def validate_token(token: str) -> dict:
     try:
-        return jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return jwt.decode(token, JWT_SECRET_KEY, algorithms=[ALGORITHM])
     
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=401, detail="Token expirado") from None
