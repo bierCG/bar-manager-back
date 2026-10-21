@@ -27,7 +27,7 @@ def get_service(session: Session = Depends(get_db)) -> PedidosService:
 
 @router.get(
     "/",
-    dependencies=[Depends(requer_roles('cozinha', 'expositor'))],
+    dependencies=[Depends(requer_roles('COZINHA', 'EXPOSITOR'))],
     response_model=list[ReadResponse])
 def listar_ultimos_pedidos(
     service: PedidosService = Depends(get_service)
@@ -39,7 +39,7 @@ def listar_ultimos_pedidos(
     response_model=list[ReadResponse]
 )
 def listar_pedidos_bartender(
-    userAuth: Auth = Depends(requer_roles('bartender')),
+    userAuth: Auth = Depends(requer_roles('BARTENDER')),
     service: PedidosService = Depends(get_service),
 ):
     return service.listar_pedidos_bartender(userAuth.sub)
@@ -53,7 +53,7 @@ def listar_pedidos_bartender(
 @router.post("/", response_model=CreateResponse)
 async def criar_pedido(
     dados_pedido: CreateRequest,
-    userAuth: Auth = Depends(requer_roles('bartender')),
+    userAuth: Auth = Depends(requer_roles('BARTENDER')),
     service: PedidosService = Depends(get_service),
 ):
     pedido = service.criar_pedido(dados_pedido, userAuth.sub)
@@ -73,7 +73,7 @@ async def criar_pedido(
 
 @router.patch(
     "/{pedido_id}/status",
-    dependencies=[Depends(requer_roles('cozinha'))],
+    dependencies=[Depends(requer_roles('COZINHA'))],
     response_model=UpdateStatusResponse
 )
 async def atualizar_status_pedido(

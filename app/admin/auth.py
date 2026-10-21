@@ -6,7 +6,7 @@ from ..core.database.connection import SessionLocal
 from ..core.database.models import Usuario               
 from ..core.security.password import validar_senha       
 
-ADMIN_ROLE = "ADMIN"  # ajuste para o valor real
+ADMIN_ROLE = "ADMIN"
 
 
 def _verificar(senha: str, hash_: str) -> bool:
