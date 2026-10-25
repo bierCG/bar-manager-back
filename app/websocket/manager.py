@@ -6,9 +6,9 @@ from app.core.logger import logger
 class ConnectionManager:
     def __init__(self):
         self.connections: dict[str, dict[int, WebSocket]] = {
-            "expositor":{},
-            "cozinha":{},
-            "bartender":{}
+            "EXPOSITOR":{},
+            "COZINHA":{},
+            "BARTENDER":{}
         }
 
     async def connect(self, websocket: WebSocket, usuario: Auth):
